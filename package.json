@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://shineamean.github.io/mobile-wedding-invitation",
+  "homepage": "https://shineamean.github.io/wedding_invi",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
