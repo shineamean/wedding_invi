@@ -5,5 +5,6 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/mobile-wedding-invitation/', // ← GitHub Pages용 경로
   plugins: [react(), tsconfigPaths(), svgr()],
 });
