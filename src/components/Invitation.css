@@ -1,0 +1,139 @@
+.invitation {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.invitation-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #d4c4b8, transparent);
+  margin: 40px auto;
+  max-width: 200px;
+}
+
+.invitation h2 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #4a4a4a;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.message {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 50px;
+}
+
+.message p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.parents {
+  margin-bottom: 40px;
+}
+
+.parent-group {
+  margin-bottom: 25px;
+  padding: 20px;
+  background-color: #fdfbf8;
+  border-radius: 8px;
+}
+
+.parent-role {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.parent-names {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.parent-names span {
+  color: #888;
+}
+
+.parent-names strong {
+  color: #4a4a4a;
+  font-weight: 600;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.contact-row {
+  display: flex;
+  gap: 12px;
+}
+
+.contact-btn {
+  flex: 1;
+  padding: 16px 20px;
+  border: 1px solid #e0d5cc;
+  background-color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-btn:hover {
+  background-color: #fdfbf8;
+  border-color: #8b6a5d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-btn .label {
+  font-size: 15px;
+  color: #555;
+  font-weight: 500;
+}
+
+.contact-btn .icons {
+  display: flex;
+  gap: 8px;
+  font-size: 18px;
+}
+
+.contact-btn.groom .label {
+  color: #4a7c9e;
+}
+
+.contact-btn.bride .label {
+  color: #c97d7d;
+}
+
+@media (max-width: 768px) {
+  .invitation {
+    padding: 40px 15px;
+  }
+
+  .invitation h2 {
+    font-size: 28px;
+  }
+
+  .message p {
+    font-size: 15px;
+  }
+
+  .contact-btn .label {
+    font-size: 14px;
+  }
+}

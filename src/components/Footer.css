@@ -1,0 +1,82 @@
+.footer {
+  padding: 60px 20px 40px;
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f5f2 100%);
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-message {
+  margin-bottom: 30px;
+}
+
+.footer-message p.serif {
+  font-size: 28px;
+  font-weight: 500;
+  color: #4a4a4a;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.footer-message .message {
+  font-size: 15px;
+  color: #888;
+  line-height: 1.8;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #d4c4b8, transparent);
+  margin: 30px auto;
+  max-width: 200px;
+}
+
+.couple-names {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #555;
+  font-weight: 500;
+}
+
+.couple-names .heart {
+  color: #d4a5a5;
+  font-size: 16px;
+}
+
+.wedding-date-simple {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.copyright {
+  padding-top: 20px;
+  border-top: 1px solid #e8e0d8;
+}
+
+.copyright p {
+  font-size: 13px;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 15px 30px;
+  }
+
+  .footer-message p.serif {
+    font-size: 24px;
+  }
+
+  .footer-message .message {
+    font-size: 14px;
+  }
+}
