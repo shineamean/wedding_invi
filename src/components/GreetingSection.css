@@ -1,0 +1,112 @@
+.greeting-section {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.greeting-message {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.greeting-message p {
+  margin-bottom: 20px;
+}
+
+.family-info {
+  margin: 30px 0;
+  font-size: 15px;
+}
+
+.family-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.parent-name {
+  color: #888;
+  font-size: 14px;
+}
+
+.relation {
+  margin: 0 6px;
+  color: #999;
+  font-size: 14px;
+}
+
+.person-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 15px;
+}
+
+.contact-section {
+  margin-top: 40px;
+}
+
+.contact-group {
+  margin-bottom: 15px;
+}
+
+.contact-person {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.contact-btn {
+  padding: 10px 20px;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.contact-btn:hover {
+  background-color: #f9f9f9;
+  border-color: #ccc;
+}
+
+.contact-btn.primary {
+  background-color: #f5f0eb;
+  border-color: #f5f0eb;
+}
+
+.contact-btn.primary:hover {
+  background-color: #ede7e0;
+}
+
+.contact-btn .icon {
+  font-size: 16px;
+}
+
+.contact-role {
+  font-size: 13px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #f0f0f0;
+  margin: 25px 0;
+}
+
+@media (max-width: 768px) {
+  .greeting-message {
+    font-size: 14px;
+  }
+}

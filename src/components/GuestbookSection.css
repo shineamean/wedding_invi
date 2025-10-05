@@ -1,0 +1,118 @@
+.guestbook-section {
+  background-color: #fdfbf9;
+}
+
+.guestbook-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 25px;
+}
+
+.message-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.form-input:focus {
+  border-color: #d5a6a6;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+  margin-bottom: 10px;
+  transition: border 0.2s;
+}
+
+.form-textarea:focus {
+  border-color: #d5a6a6;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #d5a6a6;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #c99595;
+}
+
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.messages-count {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.message-item {
+  background-color: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.message-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.message-date {
+  font-size: 12px;
+  color: #999;
+}
+
+.message-content {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  word-break: break-word;
+}

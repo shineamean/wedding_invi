@@ -1,0 +1,106 @@
+.date-section {
+  background-color: #fdfbf9;
+  text-align: center;
+}
+
+.date-content {
+  margin-bottom: 30px;
+}
+
+.calendar-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.date-content h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.date-content .time {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.date-content .venue {
+  font-size: 15px;
+  color: #888;
+}
+
+.countdown {
+  margin: 40px 0;
+  padding: 30px 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.countdown-title {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60px;
+}
+
+.time-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #d5a6a6;
+  margin-bottom: 5px;
+  font-family: 'Arial', sans-serif;
+}
+
+.time-label {
+  font-size: 12px;
+  color: #999;
+}
+
+.calendar-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 25px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.calendar-btn:hover {
+  background-color: #f9f9f9;
+  border-color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .date-content h2 {
+    font-size: 20px;
+  }
+
+  .countdown-timer {
+    gap: 15px;
+  }
+
+  .time-unit {
+    min-width: 50px;
+  }
+
+  .time-value {
+    font-size: 28px;
+  }
+}

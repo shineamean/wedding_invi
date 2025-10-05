@@ -1,0 +1,111 @@
+.account-section {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.account-subtitle {
+  font-size: 14px;
+  color: #999;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.account-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.account-group {
+  background-color: #fdfbf9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+}
+
+.account-header {
+  width: 100%;
+  padding: 18px 20px;
+  background-color: #fff;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.account-header:hover {
+  background-color: #fdfbf9;
+}
+
+.account-header .arrow {
+  color: #999;
+  font-size: 12px;
+}
+
+.account-content {
+  padding: 15px 20px 20px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.account-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.account-info {
+  text-align: left;
+  flex: 1;
+}
+
+.account-owner {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.account-number {
+  font-size: 13px;
+  color: #666;
+  font-family: 'Courier New', monospace;
+}
+
+.copy-account-btn {
+  padding: 8px 16px;
+  background-color: #f5f0eb;
+  border: 1px solid #e8ddd5;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.copy-account-btn:hover {
+  background-color: #ede7e0;
+}
+
+.account-divider {
+  height: 1px;
+  background-color: #f0f0f0;
+  margin: 0;
+}
