@@ -4,7 +4,7 @@ const MainSection = () => {
   return (
     <section className="main-section">
       <div className="main-image">
-        <img src="/photo1.webp" alt="신랑 신부 사진" className="main-photo" />
+        <img src="./photo1.webp" alt="신랑 신부 사진" className="main-photo" />
       </div>
       
       <div className="main-title">

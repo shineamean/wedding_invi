@@ -16,10 +16,21 @@ const LocationSection = () => {
   }
 
   const initNaverMap = () => {
+    const clientId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID
+    
+    if (!clientId || clientId === 'YOUR_ACTUAL_CLIENT_ID_HERE') {
+      console.warn('네이버 지도 Client ID가 설정되지 않았습니다. .env 파일을 확인해주세요.')
+      const mapElement = document.getElementById('naver-map')
+      if (mapElement) {
+        mapElement.innerHTML = '<div style="padding: 20px; text-align: center; color: #666;">지도를 불러올 수 없습니다.<br/>아래 버튼을 이용해 외부 지도 서비스를 이용해주세요.</div>'
+      }
+      return
+    }
+
     // 네이버 지도 API 스크립트 로드
     if (!window.naver) {
       const script = document.createElement('script')
-      script.src = 'https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=YOUR_CLIENT_ID'
+      script.src = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${clientId}`
       script.onload = () => {
         createMap()
       }
