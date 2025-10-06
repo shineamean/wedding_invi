@@ -1,6 +1,5 @@
 import { ReactNode, useState } from 'react';
 import styled from '@emotion/styled';
-import ExpandMore from '@/assets/icons/expand_more.svg?react';
 
 interface IAccordionProps {
   title: string;
@@ -19,7 +18,7 @@ const Accordion = ({ title, children }: IAccordionProps) => {
         <p>{title}</p>
 
         <span>
-          <ExpandMore fill="#e88ca6" />
+          ▼
         </span>
       </AccordionHeader>
 
