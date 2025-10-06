@@ -5,7 +5,6 @@ import DateSection from './components/DateSection'
 import GallerySection from './components/GallerySection'
 import LocationSection from './components/LocationSection'
 import AccountSection from './components/AccountSection'
-import GuestbookSection from './components/GuestbookSection'
 import ShareSection from './components/ShareSection'
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
       <GallerySection />
       <LocationSection />
       <AccountSection />
-      <GuestbookSection />
       <ShareSection />
     </div>
   )

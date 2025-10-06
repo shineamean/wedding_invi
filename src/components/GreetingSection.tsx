@@ -32,26 +32,26 @@ const GreetingSection = () => {
         <div className="contact-group">
           <div className="contact-person">신랑측 혼주</div>
           <div className="contact-buttons">
-            <button className="contact-btn" aria-label="신랑 아버지 전화">
+            <a href="tel:010-8628-9769" className="contact-btn" aria-label="신랑 아버지 전화">
               <span className="contact-role">아버지</span>
               <span className="icon">📞</span>
-            </button>
-            <button className="contact-btn" aria-label="신랑 어머니 전화">
+            </a>
+            <a href="tel:010-5603-9769" className="contact-btn" aria-label="신랑 어머니 전화">
               <span className="contact-role">어머니</span>
               <span className="icon">📞</span>
-            </button>
+            </a>
           </div>
         </div>
 
         <div className="contact-group">
           <div className="contact-person">신랑에게 연락하기</div>
           <div className="contact-buttons">
-            <button className="contact-btn primary" aria-label="신랑 전화">
+            <a href="tel:010-9297-9769" className="contact-btn primary" aria-label="신랑 전화">
               <span className="icon">📞</span>
-            </button>
-            <button className="contact-btn primary" aria-label="신랑 문자">
+            </a>
+            <a href="sms:010-9297-9769" className="contact-btn primary" aria-label="신랑 문자">
               <span className="icon">💬</span>
-            </button>
+            </a>
           </div>
         </div>
 
@@ -60,26 +60,26 @@ const GreetingSection = () => {
         <div className="contact-group">
           <div className="contact-person">신부측 혼주</div>
           <div className="contact-buttons">
-            <button className="contact-btn" aria-label="신부 아버지 전화">
+            <a href="tel:010-4155-4772" className="contact-btn" aria-label="신부 아버지 전화">
               <span className="contact-role">아버지</span>
               <span className="icon">📞</span>
-            </button>
-            <button className="contact-btn" aria-label="신부 어머니 전화">
+            </a>
+            <a href="tel:010-9477-0317" className="contact-btn" aria-label="신부 어머니 전화">
               <span className="contact-role">어머니</span>
               <span className="icon">📞</span>
-            </button>
+            </a>
           </div>
         </div>
 
         <div className="contact-group">
           <div className="contact-person">신부에게 연락하기</div>
           <div className="contact-buttons">
-            <button className="contact-btn primary" aria-label="신부 전화">
+            <a href="tel:010-9119-0317" className="contact-btn primary" aria-label="신부 전화">
               <span className="icon">📞</span>
-            </button>
-            <button className="contact-btn primary" aria-label="신부 문자">
+            </a>
+            <a href="sms:010-9119-0317" className="contact-btn primary" aria-label="신부 문자">
               <span className="icon">💬</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>

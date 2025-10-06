@@ -30,12 +30,12 @@ const AccountSection = () => {
             <div className="account-content">
               <div className="account-item">
                 <div className="account-info">
-                  <div className="account-owner">신랑 이태훈</div>
+                  <div className="account-owner">신랑 김지환</div>
                   <div className="account-number">하나은행 123-456789-00000</div>
                 </div>
                 <button
                   className="copy-account-btn"
-                  onClick={() => copyAccount('하나은행', '123-456789-00000', '이태훈')}
+                  onClick={() => copyAccount('하나은행', '123-456789-00000', '김지환')}
                 >
                   복사
                 </button>
@@ -57,12 +57,12 @@ const AccountSection = () => {
             <div className="account-content">
               <div className="account-item">
                 <div className="account-info">
-                  <div className="account-owner">신부 최수연</div>
+                  <div className="account-owner">신부 김이현</div>
                   <div className="account-number">신한은행 987-654321-00000</div>
                 </div>
                 <button
                   className="copy-account-btn"
-                  onClick={() => copyAccount('신한은행', '987-654321-00000', '최수연')}
+                  onClick={() => copyAccount('신한은행', '987-654321-00000', '김이현')}
                 >
                   복사
                 </button>
