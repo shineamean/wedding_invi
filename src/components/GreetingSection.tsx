@@ -1,6 +1,42 @@
+import { useEffect } from 'react'
 import './GreetingSection.css'
 
 const GreetingSection = () => {
+  useEffect(() => {
+    const toggleBtns = document.querySelectorAll('.toggle-btn')
+    const groomContacts = document.getElementById('groom-contacts')
+    const brideContacts = document.getElementById('bride-contacts')
+
+    const handleToggle = (e: Event) => {
+      const target = e.target as HTMLButtonElement
+      const side = target.getAttribute('data-side')
+      
+      // 모든 토글 버튼에서 active 클래스 제거
+      toggleBtns.forEach(btn => btn.classList.remove('active'))
+      // 클릭된 버튼에 active 클래스 추가
+      target.classList.add('active')
+      
+      // 연락처 그리드 표시/숨김
+      if (side === 'groom') {
+        if (groomContacts) groomContacts.classList.remove('hidden')
+        if (brideContacts) brideContacts.classList.add('hidden')
+      } else {
+        if (groomContacts) groomContacts.classList.add('hidden')
+        if (brideContacts) brideContacts.classList.remove('hidden')
+      }
+    }
+
+    toggleBtns.forEach(btn => {
+      btn.addEventListener('click', handleToggle)
+    })
+
+    // 클린업 함수
+    return () => {
+      toggleBtns.forEach(btn => {
+        btn.removeEventListener('click', handleToggle)
+      })
+    }
+  }, [])
   return (
     <section className="greeting-section">
       <div className="greeting-message">
@@ -29,57 +65,106 @@ const GreetingSection = () => {
       </div>
 
       <div className="contact-section">
-        <div className="contact-group">
-          <div className="contact-person">신랑측 혼주</div>
-          <div className="contact-buttons">
-            <a href="tel:010-8628-9769" className="contact-btn" aria-label="신랑 아버지 전화">
-              <span className="contact-role">아버지</span>
-              <span className="icon">📞</span>
-            </a>
-            <a href="tel:010-5603-9769" className="contact-btn" aria-label="신랑 어머니 전화">
-              <span className="contact-role">어머니</span>
-              <span className="icon">📞</span>
-            </a>
-          </div>
+        <h3 className="contact-title">연락처</h3>
+        
+        <div className="contact-toggle">
+          <button className="toggle-btn active" data-side="groom">신랑측</button>
+          <button className="toggle-btn" data-side="bride">신부측</button>
         </div>
 
-        <div className="contact-group">
-          <div className="contact-person">신랑에게 연락하기</div>
-          <div className="contact-buttons">
-            <a href="tel:010-9297-9769" className="contact-btn primary" aria-label="신랑 전화">
-              <span className="icon">📞</span>
-            </a>
-            <a href="sms:010-9297-9769" className="contact-btn primary" aria-label="신랑 문자">
-              <span className="icon">💬</span>
-            </a>
+        <div className="contact-content">
+          <div className="contact-grid" id="groom-contacts">
+            <div className="contact-item main-contact">
+              <div className="contact-info">
+                <p className="contact-name">신랑</p>
+                <p className="contact-relation">김지환</p>
+              </div>
+              <div className="contact-actions">
+                <a href="sms:010-9297-9769" className="contact-action-btn sms-btn">
+                  <span>문자</span>
+                </a>
+                <a href="tel:010-9297-9769" className="contact-action-btn call-btn">
+                  <span>전화</span>
+                </a>
+              </div>
+            </div>
+            
+            <div className="contact-item">
+              <div className="contact-info">
+                <p className="contact-name">신랑 아버지</p>
+                <p className="contact-relation">김봉수</p>
+              </div>
+              <div className="contact-actions">
+                <a href="sms:010-8628-9769" className="contact-action-btn sms-btn">
+                  <span>문자</span>
+                </a>
+                <a href="tel:010-8628-9769" className="contact-action-btn call-btn">
+                  <span>전화</span>
+                </a>
+              </div>
+            </div>
+            
+            <div className="contact-item">
+              <div className="contact-info">
+                <p className="contact-name">신랑 어머니</p>
+                <p className="contact-relation">정영주</p>
+              </div>
+              <div className="contact-actions">
+                <a href="sms:010-5603-9769" className="contact-action-btn sms-btn">
+                  <span>문자</span>
+                </a>
+                <a href="tel:010-5603-9769" className="contact-action-btn call-btn">
+                  <span>전화</span>
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div className="divider"></div>
-
-        <div className="contact-group">
-          <div className="contact-person">신부측 혼주</div>
-          <div className="contact-buttons">
-            <a href="tel:010-4155-4772" className="contact-btn" aria-label="신부 아버지 전화">
-              <span className="contact-role">아버지</span>
-              <span className="icon">📞</span>
-            </a>
-            <a href="tel:010-9477-0317" className="contact-btn" aria-label="신부 어머니 전화">
-              <span className="contact-role">어머니</span>
-              <span className="icon">📞</span>
-            </a>
-          </div>
-        </div>
-
-        <div className="contact-group">
-          <div className="contact-person">신부에게 연락하기</div>
-          <div className="contact-buttons">
-            <a href="tel:010-9119-0317" className="contact-btn primary" aria-label="신부 전화">
-              <span className="icon">📞</span>
-            </a>
-            <a href="sms:010-9119-0317" className="contact-btn primary" aria-label="신부 문자">
-              <span className="icon">💬</span>
-            </a>
+          <div className="contact-grid hidden" id="bride-contacts">
+            <div className="contact-item main-contact">
+              <div className="contact-info">
+                <p className="contact-name">신부</p>
+                <p className="contact-relation">김이현</p>
+              </div>
+              <div className="contact-actions">
+                <a href="sms:010-9119-0317" className="contact-action-btn sms-btn">
+                  <span>문자</span>
+                </a>
+                <a href="tel:010-9119-0317" className="contact-action-btn call-btn">
+                  <span>전화</span>
+                </a>
+              </div>
+            </div>
+            
+            <div className="contact-item">
+              <div className="contact-info">
+                <p className="contact-name">신부 아버지</p>
+                <p className="contact-relation">김진호</p>
+              </div>
+              <div className="contact-actions">
+                <a href="sms:010-4155-4772" className="contact-action-btn sms-btn">
+                  <span>문자</span>
+                </a>
+                <a href="tel:010-4155-4772" className="contact-action-btn call-btn">
+                  <span>전화</span>
+                </a>
+              </div>
+            </div>
+            
+            <div className="contact-item">
+              <div className="contact-info">
+                <p className="contact-name">신부 어머니</p>
+                <p className="contact-relation">이숙희</p>
+              </div>
+              <div className="contact-actions">
+                <a href="sms:010-9477-0317" className="contact-action-btn sms-btn">
+                  <span>문자</span>
+                </a>
+                <a href="tel:010-9477-0317" className="contact-action-btn call-btn">
+                  <span>전화</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
