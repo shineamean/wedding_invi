@@ -1,14 +1,19 @@
 import { useState } from 'react'
 import './AccountSection.css'
+import { showAlert } from './CustomAlert'
 
 const AccountSection = () => {
   const [isGroomOpen, setIsGroomOpen] = useState(false)
   const [isBrideOpen, setIsBrideOpen] = useState(false)
 
   const copyAccount = (bank: string, account: string, name: string) => {
-    const text = `${bank} ${account} ${name}`
+    const text = `${bank} ${account}`
     navigator.clipboard.writeText(account)
-    alert(`계좌번호가 복사되었습니다\n${text}`)
+    showAlert({
+      title: '계좌번호가 복사되었습니다',
+      message: `${text}<br/>${name}`,
+      type: 'success'
+    })
   }
 
   return (

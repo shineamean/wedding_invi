@@ -1,14 +1,22 @@
 import './ShareSection.css'
+import { showAlert } from './CustomAlert'
 
 const ShareSection = () => {
   const handleKakaoShare = () => {
-    alert('카카오톡 공유 기능\n(Kakao SDK 연동 필요)')
+    showAlert({
+      title: '카카오톡 공유',
+      message: 'Kakao SDK 연동이 필요합니다',
+      type: 'info'
+    })
   }
 
   const handleCopyLink = () => {
     const url = window.location.href
     navigator.clipboard.writeText(url)
-    alert('링크가 복사되었습니다!')
+    showAlert({
+      message: '링크가 복사되었습니다!',
+      type: 'success'
+    })
   }
 
   const handleShare = async () => {
