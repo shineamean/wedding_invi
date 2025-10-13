@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import './LocationSection.css'
+import { showAlert } from './CustomAlert'
 
 // 전역 타입 선언
 declare global {
@@ -12,7 +13,10 @@ const LocationSection = () => {
   const copyAddress = () => {
     const address = '서울특별시 중구 남대문로 39'
     navigator.clipboard.writeText(address)
-    alert('주소가 복사되었습니다')
+    showAlert({
+      message: '주소가 복사되었습니다',
+      type: 'success'
+    })
   }
 
   const initNaverMap = () => {
