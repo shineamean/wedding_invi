@@ -152,12 +152,6 @@ const LocationSection = () => {
         >
           네이버지도
         </button>
-        <button 
-          className="map-btn tmap" 
-          onClick={() => window.open('https://tmap.life/route/search?name=한국은행&lon=126.980357&lat=37.562068', '_blank')}
-        >
-          티맵
-        </button>
       </div>
 
       <button className="copy-btn" onClick={copyAddress}>

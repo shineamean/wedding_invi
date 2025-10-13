@@ -31,11 +31,23 @@ const AccountSection = () => {
               <div className="account-item">
                 <div className="account-info">
                   <div className="account-owner">신랑 김지환</div>
-                  <div className="account-number">하나은행 123-456789-00000</div>
+                  <div className="account-number">국민은행 208602-04-115968</div>
                 </div>
                 <button
                   className="copy-account-btn"
-                  onClick={() => copyAccount('하나은행', '123-456789-00000', '김지환')}
+                  onClick={() => copyAccount('국민은행', '208602-04-115968', '김지환')}
+                >
+                  복사
+                </button>
+              </div>
+              <div className="account-item">
+                <div className="account-info">
+                  <div className="account-owner">아버지 김봉수</div>
+                  <div className="account-number">신한은행 302-04-300896</div>
+                </div>
+                <button
+                  className="copy-account-btn"
+                  onClick={() => copyAccount('신한은행', '302-04-300896', '김봉수')}
                 >
                   복사
                 </button>
@@ -58,11 +70,35 @@ const AccountSection = () => {
               <div className="account-item">
                 <div className="account-info">
                   <div className="account-owner">신부 김이현</div>
-                  <div className="account-number">신한은행 987-654321-00000</div>
+                  <div className="account-number">하나은행 581-910319-49107</div>
                 </div>
                 <button
                   className="copy-account-btn"
-                  onClick={() => copyAccount('신한은행', '987-654321-00000', '김이현')}
+                  onClick={() => copyAccount('하나은행', '581-910319-49107', '김이현')}
+                >
+                  복사
+                </button>
+              </div>
+              <div className="account-item">
+                <div className="account-info">
+                  <div className="account-owner">아버지 김진호</div>
+                  <div className="account-number">국민은행 512-01-0032-789</div>
+                </div>
+                <button
+                  className="copy-account-btn"
+                  onClick={() => copyAccount('국민은행', '512-01-0032-789', '김진호')}
+                >
+                  복사
+                </button>
+              </div>
+              <div className="account-item">
+                <div className="account-info">
+                  <div className="account-owner">어머니 이숙희</div>
+                  <div className="account-number">국민은행 860602-04-136921</div>
+                </div>
+                <button
+                  className="copy-account-btn"
+                  onClick={() => copyAccount('국민은행', '860602-04-136921', '이숙희')}
                 >
                   복사
                 </button>
