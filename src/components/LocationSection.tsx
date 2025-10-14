@@ -115,8 +115,6 @@ const LocationSection = () => {
           infoWindow.open(map, marker)
         }
       })
-      
-      console.log('네이버 지도가 성공적으로 로드되었습니다.')
     } catch (error) {
       console.error('네이버 지도 생성 중 오류 발생:', error)
       if (mapElement) {
