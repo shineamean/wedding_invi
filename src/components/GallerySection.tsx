@@ -4,11 +4,13 @@ import './GallerySection.css'
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
 
+  const basePath = import.meta.env.BASE_URL
+  
   const images = [
-    { id: 1, src: '/photo1.webp', alt: '사진 1' },
-    { id: 2, src: '/photo2.webp', alt: '사진 2' },
-    { id: 3, src: '/photo3.webp', alt: '사진 3' },
-    { id: 4, src: '/photo4.webp', alt: '사진 4' }
+    { id: 1, src: `${basePath}photo1.webp`, alt: '사진 1' },
+    { id: 2, src: `${basePath}photo2.webp`, alt: '사진 2' },
+    { id: 3, src: `${basePath}photo3.webp`, alt: '사진 3' },
+    { id: 4, src: `${basePath}photo4.webp`, alt: '사진 4' }
   ]
 
   const handleImageClick = (id: number) => {

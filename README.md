@@ -145,6 +145,16 @@ npm install -g vercel
 vercel
 ```
 
+## 🗺️ 네이버 지도 연동
+
+1. [네이버 클라우드 플랫폼](https://console.ncloud.com/naver-service/application)에서 애플리케이션 등록
+2. Maps API 서비스 신청 및 Client ID 발급
+3. 프로젝트 루트에 `.env` 파일 생성:
+```bash
+VITE_APP_NAVERMAPS_CLIENT_ID=your_actual_client_id_here
+```
+4. Client ID가 없어도 카카오맵/네이버지도 버튼은 정상 작동합니다
+
 ## 📱 카카오톡 공유 연동
 
 1. [Kakao Developers](https://developers.kakao.com)에서 앱 등록
@@ -163,7 +173,7 @@ vercel
 - [ ] 전화번호 연결 (href="tel:010-xxxx-xxxx")
 - [ ] 실제 사진으로 교체
 - [ ] 계좌번호 입력
-- [ ] 지도 API 연동 (선택)
+- [ ] 네이버 지도 API 연동 (선택)
 - [ ] 카카오톡 공유 기능 연동 (선택)
 - [ ] 도메인 연결 및 배포
 
