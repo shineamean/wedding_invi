@@ -52,57 +52,56 @@ const LocationSection = () => {
       return
     }
 
-    try {
-      const location = new window.naver.maps.LatLng(37.562068, 126.980357)
-      
-      const map = new window.naver.maps.Map(mapElement, {
-        center: location,
-        zoom: 16,
-        minZoom: 12,
-        maxZoom: 19,
-        draggable: true,
-        pinchZoom: true,
-        scrollWheel: true,
-        keyboardShortcuts: true,
-        disableDoubleTapZoom: false,
-        disableDoubleClickZoom: false,
-        disableTwoFingerTapZoom: false,
-        zoomControl: true,
-        zoomControlOptions: {
-          position: window.naver.maps.Position.TOP_RIGHT
-        }
-      })
+    const location = new window.naver.maps.LatLng(37.562068, 126.980357)
+    
+    const map = new window.naver.maps.Map(mapElement, {
+      center: location,
+      zoom: 16,
+      minZoom: 12,
+      maxZoom: 19,
+      draggable: true,
+      pinchZoom: true,
+      scrollWheel: true,
+      keyboardShortcuts: true,
+      disableDoubleTapZoom: false,
+      disableDoubleClickZoom: false,
+      disableTwoFingerTapZoom: false,
+      zoomControl: true,
+      zoomControlOptions: {
+        position: window.naver.maps.Position.TOP_RIGHT
+      }
+    })
 
-      // 마커 추가
-      const marker = new window.naver.maps.Marker({
-        position: location,
-        map: map,
-        title: '한국은행 2층 컨퍼런스홀',
-        icon: {
-          content: '<div style="background: #ff6b6b; color: white; padding: 10px; border-radius: 50%; font-size: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; width: 40px; height: 40px;">💒</div>',
-          anchor: new window.naver.maps.Point(20, 20)
-        }
-      })
+    // 마커 추가
+    const marker = new window.naver.maps.Marker({
+      position: location,
+      map: map,
+      title: '한국은행 2층 컨퍼런스홀',
+      icon: {
+        content: '<div style="background: #ff6b6b; color: white; padding: 10px; border-radius: 50%; font-size: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; width: 40px; height: 40px;">💒</div>',
+        anchor: new window.naver.maps.Point(20, 20)
+      }
+    })
 
-      // 정보창 추가
-      const infoWindow = new window.naver.maps.InfoWindow({
-        content: `
-          <div style="padding: 15px; min-width: 200px;">
-            <h4 style="margin: 0 0 8px 0; color: #333;">한국은행 2층 컨퍼런스홀</h4>
-            <p style="margin: 0 0 5px 0; color: #666; font-size: 13px;">서울특별시 중구 남대문로 39</p>
-            <p style="margin: 0; color: #666; font-size: 13px;">📅 2025년 12월 14일 오후 12시 30분</p>
-          </div>
-        `
-      })
+    // 정보창 추가
+    const infoWindow = new window.naver.maps.InfoWindow({
+      content: `
+        <div style="padding: 15px; min-width: 200px;">
+          <h4 style="margin: 0 0 8px 0; color: #333;">한국은행 2층 컨퍼런스홀</h4>
+          <p style="margin: 0 0 5px 0; color: #666; font-size: 13px;">서울특별시 중구 남대문로 39</p>
+          <p style="margin: 0; color: #666; font-size: 13px;">📅 2025년 12월 14일 오후 12시 30분</p>
+        </div>
+      `
+    })
 
-      // 마커 클릭시 정보창 표시
-      window.naver.maps.Event.addListener(marker, 'click', () => {
-        if (infoWindow.getMap()) {
-          infoWindow.close()
-        } else {
-          infoWindow.open(map, marker)
-        }
-      })
+    // 마커 클릭시 정보창 표시
+    window.naver.maps.Event.addListener(marker, 'click', () => {
+      if (infoWindow.getMap()) {
+        infoWindow.close()
+      } else {
+        infoWindow.open(map, marker)
+      }
+    })
   }
 
   useEffect(() => {
