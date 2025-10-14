@@ -94,3 +94,4 @@ export const showAlert = (config: AlertConfig) => {
 
 export default CustomAlertClass
 
+
