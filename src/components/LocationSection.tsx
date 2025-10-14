@@ -33,9 +33,6 @@ const LocationSection = () => {
       script.onload = () => {
         createMap()
       }
-      script.onerror = () => {
-        // 조용히 실패 처리
-      }
       document.head.appendChild(script)
     } else {
       createMap()
@@ -106,9 +103,6 @@ const LocationSection = () => {
           infoWindow.open(map, marker)
         }
       })
-    } catch (error) {
-      // 조용히 오류 처리
-    }
   }
 
   useEffect(() => {
