@@ -23,7 +23,6 @@ const LocationSection = () => {
     const clientId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID
     
     if (!clientId || clientId === 'YOUR_ACTUAL_CLIENT_ID_HERE') {
-      console.warn('네이버 지도 Client ID가 설정되지 않았습니다. .env 파일을 확인해주세요.')
       return
     }
 
@@ -34,8 +33,8 @@ const LocationSection = () => {
       script.onload = () => {
         createMap()
       }
-      script.onerror = (error) => {
-        console.error('네이버 지도 API 로드 실패:', error)
+      script.onerror = () => {
+        // 조용히 실패 처리
       }
       document.head.appendChild(script)
     } else {
@@ -108,7 +107,7 @@ const LocationSection = () => {
         }
       })
     } catch (error) {
-      console.error('네이버 지도 생성 중 오류 발생:', error)
+      // 조용히 오류 처리
     }
   }
 
