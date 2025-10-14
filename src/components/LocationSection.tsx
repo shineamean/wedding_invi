@@ -24,10 +24,6 @@ const LocationSection = () => {
     
     if (!clientId || clientId === 'YOUR_ACTUAL_CLIENT_ID_HERE') {
       console.warn('네이버 지도 Client ID가 설정되지 않았습니다. .env 파일을 확인해주세요.')
-      const mapElement = document.getElementById('naver-map')
-      if (mapElement) {
-        mapElement.innerHTML = '<div style="padding: 20px; text-align: center; color: #666;">지도를 불러올 수 없습니다.<br/>아래 버튼을 이용해 외부 지도 서비스를 이용해주세요.</div>'
-      }
       return
     }
 
@@ -40,10 +36,6 @@ const LocationSection = () => {
       }
       script.onerror = (error) => {
         console.error('네이버 지도 API 로드 실패:', error)
-        const mapElement = document.getElementById('naver-map')
-        if (mapElement) {
-          mapElement.innerHTML = '<div style="padding: 20px; text-align: center; color: #666;">지도를 불러올 수 없습니다.<br/>아래 버튼을 이용해 외부 지도 서비스를 이용해주세요.</div>'
-        }
       }
       document.head.appendChild(script)
     } else {
@@ -117,9 +109,6 @@ const LocationSection = () => {
       })
     } catch (error) {
       console.error('네이버 지도 생성 중 오류 발생:', error)
-      if (mapElement) {
-        mapElement.innerHTML = '<div style="padding: 20px; text-align: center; color: #666;">지도를 불러올 수 없습니다.<br/>아래 버튼을 이용해 외부 지도 서비스를 이용해주세요.</div>'
-      }
     }
   }
 
