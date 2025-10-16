@@ -4,6 +4,7 @@ import GreetingSection from './components/GreetingSection'
 import DateSection from './components/DateSection'
 import GallerySection from './components/GallerySection'
 import LocationSection from './components/LocationSection'
+import GuestbookSection from './components/GuestbookSection'
 import AccountSection from './components/AccountSection'
 import ClosingSection from './components/ClosingSection'
 
@@ -15,6 +16,7 @@ function App() {
       <DateSection />
       <GallerySection />
       <LocationSection />
+      <GuestbookSection />
       <AccountSection />
       <ClosingSection />
     </div>
