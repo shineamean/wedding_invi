@@ -16,8 +16,8 @@ function App() {
       <DateSection />
       <GallerySection />
       <LocationSection />
-      <GuestbookSection />
       <AccountSection />
+      <GuestbookSection />
       <ClosingSection />
     </div>
   )
